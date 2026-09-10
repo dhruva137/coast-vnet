@@ -1,7 +1,7 @@
 # COAST pairing relay (Cloudflare Worker + KV)
 #
 # This is NOT the Pages landing. Pages has no persistent process and cannot
-# hold mailboxes. Bind this Worker to coast.paper2anything.com (or a
+# hold mailboxes. Bind this Worker to coast.papertoanything.com (or a
 # dedicated host) after creating the KV namespace.
 #
 #   npx wrangler kv namespace create MAILBOX

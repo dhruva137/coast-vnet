@@ -26,7 +26,7 @@ naive baselines and the ISRO PS 26168 bar, and downloads.
 
 To deploy it, see [`site/DEPLOY.md`](site/DEPLOY.md) for step-by-step Vercel
 and Cloudflare Pages instructions, including how to point
-`coast.paper2anything.com` at either host.
+`coast.papertoanything.com` at either host.
 
 ### Console (laptop)
 

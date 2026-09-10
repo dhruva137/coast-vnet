@@ -63,13 +63,13 @@ python -m relay --port 8788 --store ./relay-data --jsonl ./relay.jsonl
 On the **laptop console**:
 
 ```
-set COAST_RELAY_BASE=https://coast.paper2anything.com
+set COAST_RELAY_BASE=https://coast.papertoanything.com
 python -m web.coast_console
 ```
 
-PowerShell: `$env:COAST_RELAY_BASE = "https://coast.paper2anything.com"`.
+PowerShell: `$env:COAST_RELAY_BASE = "https://coast.papertoanything.com"`.
 
-If unset, the console still encodes `https://coast.paper2anything.com` in the
+If unset, the console still encodes `https://coast.papertoanything.com` in the
 QR so a venue phone can post without LAN. Set `COAST_RELAY_BASE=off` to force
 LAN-only (QR host = laptop).
 
@@ -91,7 +91,7 @@ npx wrangler kv namespace create MAILBOX
 ```
 
 Paste the id into `relay/wrangler.toml`, then `npx wrangler deploy`. Route the
-custom domain (`coast.paper2anything.com`) to this Worker in the dashboard.
+custom domain (`coast.papertoanything.com`) to this Worker in the dashboard.
 
 If Pages also uses that domain, Worker routes must win for `/ingest`,
 `/pair/open`, `/feed`, `/mailbox*`, `/api/health`, and `/pair`.

@@ -58,11 +58,11 @@ class ConsolePairClientParseTest {
     @Test
     fun parsesPhoneMintedRelayOnlyUrl() {
         val raw =
-            "https://coast.paper2anything.com/pair?s=AbCdEfGhIj&relay=https%3A%2F%2Fcoast.paper2anything.com"
+            "https://coast.papertoanything.com/pair?s=AbCdEfGhIj&relay=https%3A%2F%2Fcoast.papertoanything.com"
         val p = ConsolePairClient.parse(raw)
         assertNotNull(p)
         assertEquals("AbCdEfGhIj", p!!.token)
-        assertEquals("https://coast.paper2anything.com", p.relayBase)
+        assertEquals("https://coast.papertoanything.com", p.relayBase)
         assertNull("phone-initiated QR must not treat the relay origin as LAN", p.lanBase)
         assertTrue(p.hasEndpoint())
     }
@@ -70,22 +70,22 @@ class ConsolePairClientParseTest {
     @Test
     fun parsesPhoneMintedUrlWithOptionalLan() {
         val raw =
-            "https://coast.paper2anything.com/pair?s=Ab-Cd_EfGh&relay=https%3A%2F%2Fcoast.paper2anything.com&lan=http%3A%2F%2F192.168.137.1%3A8787"
+            "https://coast.papertoanything.com/pair?s=Ab-Cd_EfGh&relay=https%3A%2F%2Fcoast.papertoanything.com&lan=http%3A%2F%2F192.168.137.1%3A8787"
         val p = ConsolePairClient.parse(raw)
         assertNotNull(p)
         assertEquals("Ab-Cd_EfGh", p!!.token)
-        assertEquals("https://coast.paper2anything.com", p.relayBase)
+        assertEquals("https://coast.papertoanything.com", p.relayBase)
         assertEquals("http://192.168.137.1:8787", p.lanBase)
     }
 
     @Test
     fun parsesPhoneMintedCoastScheme() {
         val raw =
-            "coast://pair?s=AbCdEfGh&relay=https%3A%2F%2Fcoast.paper2anything.com"
+            "coast://pair?s=AbCdEfGh&relay=https%3A%2F%2Fcoast.papertoanything.com"
         val p = ConsolePairClient.parse(raw)
         assertNotNull(p)
         assertEquals("AbCdEfGh", p!!.token)
-        assertEquals("https://coast.paper2anything.com", p.relayBase)
+        assertEquals("https://coast.papertoanything.com", p.relayBase)
         assertNull(p.lanBase)
     }
 
@@ -121,11 +121,11 @@ class ConsolePairClientParseTest {
     @Test
     fun pairPayloadRoundTripRelayOnly() {
         val token = ConsolePairClient.mintToken()
-        val url = ConsolePairClient.pairPayload(token, "https://coast.paper2anything.com/")
+        val url = ConsolePairClient.pairPayload(token, "https://coast.papertoanything.com/")
         val p = ConsolePairClient.parse(url)
         assertNotNull(p)
         assertEquals(token, p!!.token)
-        assertEquals("https://coast.paper2anything.com", p.relayBase)
+        assertEquals("https://coast.papertoanything.com", p.relayBase)
         assertNull(p.lanBase)
     }
 

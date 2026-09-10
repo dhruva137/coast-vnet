@@ -39,7 +39,7 @@ judge can install without typing anything.
 
 ### Steps
 
-1. Point `coast.paper2anything.com` at Cloudflare (nameservers), add it as a
+1. Point `coast.papertoanything.com` at Cloudflare (nameservers), add it as a
    Pages custom domain. DNS propagation takes hours — **do this first**.
 2. Build `site/` to static output; `wrangler.toml` already exists.
 3. Upload the APK to GitHub Releases; put the URL + QR on the site.

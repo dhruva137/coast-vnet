@@ -9,7 +9,7 @@
  *   GET  /feed?s=TOKEN[&peek=1][&after=N]
  *   GET  /mailbox/{token}
  *
- * Pages cannot do this. Bind this Worker to coast.paper2anything.com (or a
+ * Pages cannot do this. Bind this Worker to coast.papertoanything.com (or a
  * subdomain) and create a KV namespace bound as MAILBOX.
  *
  *   cd relay

@@ -19,11 +19,11 @@ Fastest, no local install needed.
 4. **Framework Preset:** *Other*. No build command, no output directory.
 5. *Deploy.* You get a `*.vercel.app` URL immediately.
 
-### Custom domain — `coast.paper2anything.com`
+### Custom domain — `coast.papertoanything.com`
 
-1. In Vercel → *Project → Settings → Domains*, add `coast.paper2anything.com`.
+1. In Vercel → *Project → Settings → Domains*, add `coast.papertoanything.com`.
    Vercel shows a CNAME target (usually `cname.vercel-dns.com`).
-2. In Cloudflare → your `paper2anything.com` zone → *DNS* → *Add record*:
+2. In Cloudflare → your `papertoanything.com` zone → *DNS* → *Add record*:
    - Type: `CNAME`
    - Name: `coast`
    - Target: the CNAME Vercel showed
@@ -42,10 +42,10 @@ Same repo, one host.
    **build output directory** `site`.
 3. Deploy. You get a `*.pages.dev` URL.
 
-### Custom domain — `coast.paper2anything.com`
+### Custom domain — `coast.papertoanything.com`
 
 1. In the Pages project → *Custom domains → Set up a custom domain* →
-   `coast.paper2anything.com`. Cloudflare adds the DNS record automatically
+   `coast.papertoanything.com`. Cloudflare adds the DNS record automatically
    because the zone is already in the account.
 2. Certificate provisions in a minute or two. Done.
 

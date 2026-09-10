@@ -39,11 +39,11 @@ class ConsolePairClientTest {
     @Test
     fun `parses phone-minted relay plus nonce`() {
         val raw =
-            "https://coast.paper2anything.com/pair?s=Ph0neMint_1&relay=https%3A%2F%2Fcoast.paper2anything.com"
+            "https://coast.papertoanything.com/pair?s=Ph0neMint_1&relay=https%3A%2F%2Fcoast.papertoanything.com"
         val cfg = ConsolePairClient.parse(raw)
         assertNotNull(cfg)
         assertEquals("Ph0neMint_1", cfg!!.token)
-        assertEquals("https://coast.paper2anything.com", cfg.relayBase)
+        assertEquals("https://coast.papertoanything.com", cfg.relayBase)
         assertNull(cfg.lanBase)
     }
 }

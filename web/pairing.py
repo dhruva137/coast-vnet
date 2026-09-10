@@ -46,7 +46,7 @@ except ImportError:  # pragma: no cover
 # Public store-and-forward host encoded in the QR when COAST_RELAY_BASE is unset.
 # Not claimed deployed by this repo — set COAST_RELAY_BASE to a running relay,
 # or `off` for LAN-only. See relay/README.md.
-DEFAULT_RELAY_BASE = "https://coast.paper2anything.com"
+DEFAULT_RELAY_BASE = "https://coast.papertoanything.com"
 
 # Session lifetime. Short, because a pairing code that lingers is a pairing code
 # that leaks.
