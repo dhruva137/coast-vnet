@@ -81,7 +81,7 @@ export function Landing({ onOpenConsole, onRunDemo, onNavigate }: LandingProps) 
               Open console
             </button>
             <button className="btn-ghost" type="button" onClick={onRunDemo}>
-              Run live demo
+              View Demo Mode →
             </button>
             <button className="btn-ghost" type="button" onClick={() => onNavigate("evidence")}>
               Inspect evidence
