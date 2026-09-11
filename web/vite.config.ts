@@ -13,6 +13,11 @@ export default defineConfig({
       "@sih26168/nav-core": resolve(dir, "../core/ts/src/index.ts"),
     },
   },
+  build: {
+    // Output to repo root /dist so Vercel finds it without extra config.
+    outDir: resolve(dir, "../dist"),
+    emptyOutDir: true,
+  },
   server: {
     port: 26168,
     // Default: localhost only. Set COAST_LAN=1 for phone/LAN access (0.0.0.0).
