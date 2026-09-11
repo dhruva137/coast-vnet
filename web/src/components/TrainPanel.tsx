@@ -64,7 +64,7 @@ export function TrainPanel() {
         return;
       }
       if (ev.type === "line" && typeof ev.text === "string") {
-        setLog((prev) => [...prev.slice(-80), ev.text]);
+        setLog((prev) => [...prev.slice(-80), ev.text as string]);
         return;
       }
       if (ev.type === "train_baselines") {
